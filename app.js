@@ -67,6 +67,6 @@ app.use("/campgrounds", campgrounds)
 app.use("/campgrounds/:id/comments", comments)
 app.use("/user", usersRoutes)
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
     console.log("Server is on")
 })
