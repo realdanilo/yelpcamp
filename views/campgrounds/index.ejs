@@ -1,0 +1,43 @@
+<%-include("../partials/header")%>
+<div class="container">
+    <!-- //if no campgrounds are found -->
+    <%if(campgrounds.docs.length ==0){%>
+    <p class="text-center">No search, search again</p>
+    <form action="/campgrounds" method="GET" class="mt-5 noSearchCampgroundIndex">
+        <label class="" for="fuzzySearch">Search Campground</label>
+        <div class="input-group ">
+            <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fa fa-search"></i></div>
+            </div>
+            <input name="search" type="text" class="form-control" id="fuzzySearch" required>
+            <button type="submit" class="btn btn-sm btn-primary">Find</button>
+
+        </div>
+    </form>
+    <% }%>
+
+    <div class="row">
+        <% campgrounds.docs.forEach(campground =>{ %>
+        <div class="col-sm-10 col-md-4 mx-auto">
+            <div class="card mb-4 customIndex">
+                <img class="card-img-top" src="<%=campground.images[0].url%>" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title"> <%= campground.title%></h5>
+                    <p class="card-text"> <%- campground.description.substring(0,90)%>...</p>
+                    <a href="/campgrounds/<%=campground._id%>" class="btn btn-sm btn-primary">Visit</a>
+                </div>
+            </div>
+        </div>
+        <%})%>
+
+    </div>
+    <%if(campgrounds.docs.length > 0){%>
+    <div class="row">
+        <div class="my-4 d-block"><%-include("../partials/pagination")%></div>
+
+    </div>
+    <%}%>
+    
+</div>
+
+<%-include("../partials/footer")%>

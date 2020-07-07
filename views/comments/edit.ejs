@@ -1,0 +1,17 @@
+<%- include("../partials/header")%>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 col-md-5 mx-auto mt-4">
+            <form action="/campgrounds/<%=campground%>/comments/<%=comment._id%>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <label for="description">Comment</label>
+                    <textarea class="form-control" name="comment[description]" id="description" cols="30"
+                        rows="5"><%=comment.description%></textarea>
+                </div>
+                <input type="button" class="btn btn-secondary" value="Back" onclick="history.back()">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include("../partials/footer")%>

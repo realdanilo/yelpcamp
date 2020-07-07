@@ -1,0 +1,74 @@
+/* //all buttons focus  */
+button:focus{
+  outline: none;
+}
+/* campground index */
+.customIndex img {
+  height: 250px !important;
+  object-fit: cover;
+
+}
+/* no search campground index */
+.noSearchCampgroundIndex{
+  max-width: 400px;
+   margin: 0 auto;
+}
+
+/* //carousel  */
+.carousel-inner .carousel-item{
+    width:100%;
+    max-height: 300px !important;
+  }
+  .carousel-inner img {
+      min-height: 300px;
+    object-fit: contain;
+  }
+  @media (min-width:800px){
+    .carousel-inner .carousel-item{
+        max-height: 450px !important;
+      }
+  }
+
+/* EDIT IMAGE CONTAINER  */
+#editImageContainer{
+  max-width:100%;
+  /* background-color: rgb(255, 255, 255); */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+
+}
+.oneImageContainer{
+  display: inline-block;
+  width:150px !important;
+ height: 130px !important;
+ padding:0 !important;
+ margin:10px;
+ border:1px solid #ced4da !important;
+ border-radius: calc(.25rem - 1px);
+
+}
+.oneImageContainer .card-body{
+  padding:1px !important;
+  text-align: center;
+  position: relative !important;
+
+}
+.oneImageContainer img{
+  object-fit: contain;
+ max-height: 100px !important;
+}
+.toBeDeleted{
+  background-color: rgba(255, 0, 0, 0.513) !important;
+  color: white !important;
+  padding: 5px !important;
+  border:2px solid rgba(255, 0, 0, 0.513) !important;
+}
+
+/* show campground, map css */
+#map {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+}

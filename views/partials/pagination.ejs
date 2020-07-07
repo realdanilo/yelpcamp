@@ -1,0 +1,16 @@
+<!-- pagination numbers -->
+<div>
+    <!-- prev  -->
+    <% if(campgrounds.page -1 ){%>
+    <a href="/campgrounds?page=<%=campgrounds.page -1%>">Prev</a>
+    <%}%>
+    <!-- loop for number  -->
+        <% for(let i=1; i<= campgrounds.pages ;  i++){%>
+    <a href="/campgrounds?page=<%=i%>" <%= i === campgrounds.page? "style= color:#000": ""  %>> <%=i%></a>
+    <%}%>
+        <!-- next  -->
+        <%if (campgrounds.page + 1 <= campgrounds.pages){%>
+    <a href="/campgrounds?page=<%=campgrounds.page +1%>">Next </a>
+    <%}%>
+</div>
+<!-- pagination numbers -->
