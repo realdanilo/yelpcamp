@@ -11,7 +11,7 @@ This is the revised version which uses **ES6+** and **MVC** architecture
  4. Nested Routes
  5. User Profile
  6. Admin Config
- 7. Update Images - Cloudinary
+ 7. Upload/Update Images - Cloudinary
  8. EJS
 
 You can find the app here: [https://danilocamp.herokuapp.com/campgrounds](https://danilocamp.herokuapp.com/campgrounds)
