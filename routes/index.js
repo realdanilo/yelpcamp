@@ -3,7 +3,7 @@ const router = express.Router()
 const { registerUser, login, logout } = require("../controllers")
 
 // landing
-router.get("/", (req, res, next) => res.render("landing"))
+router.get("/", (req, res, next) => res.redirect("/campgrounds"))
 // register  
 router.get("/register", (req, res, next) => res.render("register"))
 router.post("/register", registerUser)
